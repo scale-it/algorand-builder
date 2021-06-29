@@ -1,4 +1,4 @@
-import { AssetDef, encodeAddress } from "algosdk";
+import { AssetParams, encodeAddress } from "algosdk";
 
 import { RUNTIME_ERRORS } from "../errors/errors-list";
 import { RuntimeError } from "../errors/runtime-errors";
@@ -47,7 +47,7 @@ export class Interpreter {
    * Queries ASA Definitions data by assetID.  Returns undefined if ASA is not deployed.
    * @param assetId Asset Index
    */
-  getAssetDef (assetId: number): AssetDef | undefined {
+  getAssetDef (assetId: number): AssetParams | undefined {
     const accountAddr = this.runtime.ctx.state.assetDefs.get(assetId);
     if (!accountAddr) return undefined;
 
@@ -80,8 +80,13 @@ export class Interpreter {
       account = this.runtime.ctx.state.accounts.get(address);
     } else {
       const accIndex = accountIndex - 1n;
-      checkIndexBound(Number(accIndex), this.runtime.ctx.tx.apat, line);
-      const pkBuffer = this.runtime.ctx.tx.apat[Number(accIndex)];
+      checkIndexBound(Number(accIndex), this.runtime.ctx.tx.apat as Buffer[], line);
+      let pkBuffer;
+      if (this.runtime.ctx.tx.apat) {
+        pkBuffer = this.runtime.ctx.tx.apat[Number(accIndex)];
+      } else {
+        throw new Error("pk Buffer not found");
+      }
       address = encodeAddress(pkBuffer);
       account = this.runtime.ctx.state.accounts.get(address);
     }

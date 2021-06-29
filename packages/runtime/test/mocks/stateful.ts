@@ -1,14 +1,15 @@
-import { AssetDef } from "algosdk";
+import { AssetParams } from "algosdk";
 
 import { stringToBytes } from "../../src/lib/parsing";
 import { AppLocalStateM, AssetHoldingM, SSCAttributesM, StackElem } from "../../src/types";
 import { elonAddr } from "./txn";
+import { BaseModel, BaseModelI } from '../../src/account';
 
 const convertToKey = (str: string): string => { return stringToBytes(str).toString(); };
 
 const appLocalState = new Map<number, AppLocalStateM>();
 const createdApps = new Map<number, SSCAttributesM>();
-const createdAssets = new Map<number, AssetDef>();
+const createdAssets = new Map<number, AssetParams>();
 
 const assets = new Map<number, AssetHoldingM>();
 assets.set(3, { 'asset-id': 3, amount: 2n, creator: "string", 'is-frozen': false });
@@ -21,6 +22,7 @@ globalStateMap.set(convertToKey('global-key'), stringToBytes('global-val'));
 const localStateMap = new Map<string, StackElem>();
 localStateMap.set(convertToKey('Local-key'), stringToBytes('Local-val'));
 
+let base: BaseModel = new BaseModelI();
 export const accInfo = [{
   address: "addr-1",
   assets: assets,
@@ -29,18 +31,19 @@ export const accInfo = [{
     id: 1847,
     'key-value': localStateMap,
     schema: {
-      'num-byte-slice': 2,
-      'num-uint': 1
+      ...base,
+      numByteSlice: 2,
+      numUint: 1
     }
   }),
-  appsTotalSchema: { 'num-byte-slice': 583, 'num-uint': 105 },
+  appsTotalSchema: { ...base, 'numByteSlice': 583, 'numUint': 105 },
   createdApps: createdApps.set(1828, {
     'approval-program': '',
     'clear-state-program': '',
     creator: elonAddr,
     'global-state': globalStateMap,
-    'global-state-schema': { 'num-byte-slice': 3, 'num-uint': 1 },
-    'local-state-schema': { 'num-byte-slice': 0, 'num-uint': 16 }
+    'global-state-schema': { ...base, 'numByteSlice': 3, 'numUint': 1 },
+    'local-state-schema': { ...base, 'numByteSlice': 0, 'numUint': 16 }
   }),
   createdAssets: createdAssets.set(3, {
     creator: "addr-1",
@@ -54,6 +57,7 @@ export const accInfo = [{
     manager: "addr-1",
     reserve: "addr-2",
     freeze: "addr-3",
-    clawback: "addr-4"
+    clawback: "addr-4",
+    ...base
   })
 }];

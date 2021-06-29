@@ -1,5 +1,6 @@
 import { types as rtypes } from "@algo-builder/runtime";
-import { generateAccount, LogicSig } from "algosdk";
+import { ASADef } from "@algo-builder/runtime/build/types";
+import algosdk, { generateAccount } from "algosdk";
 import { assert } from "chai";
 
 import { genAccounts } from "../../src/builtin-tasks/gen-accounts";
@@ -15,7 +16,7 @@ import { useFixtureProject } from "../helpers/project";
 import { cleanupMutableData } from "../lib/script-checkpoints";
 import { AlgoOperatorDryRunImpl } from "../stubs/algo-operator";
 
-function mkASA (): rtypes.ASADef {
+function mkASA (): ASADef {
   return {
     total: 1,
     decimals: 1,
@@ -335,7 +336,7 @@ describe("DeployerDeployMode", () => {
       .registerLsig(networkName, "Lsig name", {
         creator: "Lsig creator",
         contractAddress: "addr-1",
-        lsig: {} as LogicSig
+        lsig: {} as rtypes.LogicSig
       })
       .putMetadata(networkName, "k", "v");
     const deployerCfg = new DeployerConfig(env, new AlgoOperatorDryRunImpl());

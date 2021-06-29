@@ -1,5 +1,6 @@
 import { overrideASADef, types as rtypes } from "@algo-builder/runtime";
-import type { LogicSig, MultiSig } from "algosdk";
+import { ASADef } from "@algo-builder/runtime/build/types";
+import type { AssetParams, EncodedMultisig } from "algosdk";
 import * as algosdk from "algosdk";
 
 import { BuilderError } from "../errors/errors";
@@ -102,7 +103,7 @@ class DeployerBasicMode {
     return this.algoOp.algodClient;
   }
 
-  async waitForConfirmation (txId: string): Promise<algosdk.ConfirmedTxInfo> {
+  async waitForConfirmation (txId: string): Promise<algosdk.PendingTransactionResponse> {
     return await this.algoOp.waitForConfirmation(txId);
   }
 
@@ -111,7 +112,7 @@ class DeployerBasicMode {
    * @param assetIndex asset index
    * @returns asset info from network
    */
-  async getAssetByID (assetIndex: number | bigint): Promise<algosdk.AssetInfo> {
+  async getAssetByID (assetIndex: number | bigint): Promise<algosdk.modelsv2.Asset> {
     return await this.algoOp.getAssetByID(assetIndex);
   }
 
@@ -125,7 +126,7 @@ class DeployerBasicMode {
    * of asaDef could be updated during tx execution (eg. update asset clawback)
    * @param asaName asset name in asa.yaml
    */
-  loadASADef (asaName: string): rtypes.ASADef | undefined {
+  loadASADef (asaName: string): ASADef | undefined {
     const asaMap = this.cpData.precedingCP[this.networkName]?.asa ?? new Map();
     return asaMap.get(asaName)?.assetDef;
   }
@@ -142,7 +143,7 @@ class DeployerBasicMode {
   /**
    * Loads a single signed delegated logic signature from checkpoint
    */
-  getDelegatedLsig (lsigName: string): LogicSig | undefined {
+  getDelegatedLsig (lsigName: string): rtypes.LogicSig | undefined {
     const resultMap = this.cpData.precedingCP[this.networkName]?.dLsig ?? new Map(); ;
     const result = resultMap.get(lsigName)?.lsig;
     if (result === undefined) { return undefined; }
@@ -158,7 +159,7 @@ class DeployerBasicMode {
    * @param scTmplParams: Smart contract template parameters (used only when compiling PyTEAL to TEAL)
    * @returns loaded logic signature from assets/<file_name>.teal
    */
-  async loadLogic (name: string, scTmplParams?: SCParams): Promise<LogicSig> {
+  async loadLogic (name: string, scTmplParams?: SCParams): Promise<rtypes.LogicSig> {
     return await getLsig(name, this.algoOp.algodClient, scTmplParams);
   }
 
@@ -167,12 +168,12 @@ class DeployerBasicMode {
    * @param name filename
    * @returns multi signed logic signature from assets/<file_name>.(b)lsig
    */
-  async loadMultiSig (name: string): Promise<LogicSig> {
+  async loadMultiSig (name: string): Promise<rtypes.LogicSig> {
     if (name.endsWith(blsigExt)) { return await loadBinaryLsig(name); }
 
     const lsig = await getLsig(name, this.algoOp.algodClient); // get lsig from .teal (getting logic part from lsig)
     const msig = await readMsigFromFile(name); // Get decoded Msig object from .msig
-    Object.assign(lsig.msig = {} as MultiSig, msig);
+    Object.assign(lsig.msig = {} as EncodedMultisig, msig);
     return lsig;
   }
 
@@ -180,7 +181,7 @@ class DeployerBasicMode {
    * Send signed transaction to network and wait for confirmation
    * @param rawTxns Signed Transaction(s)
    */
-  async sendAndWait (rawTxns: Uint8Array | Uint8Array[]): Promise<algosdk.ConfirmedTxInfo> {
+  async sendAndWait (rawTxns: Uint8Array | Uint8Array[]): Promise<algosdk.PendingTransactionResponse> {
     return await this.algoOp.sendAndWait(rawTxns);
   }
 
@@ -227,7 +228,7 @@ class DeployerBasicMode {
    * @param lsig logic signature
    * @param flags Transaction flags
    */
-  async optInLsigToASA (asa: string, lsig: LogicSig, flags: rtypes.TxParams): Promise<void> {
+  async optInLsigToASA (asa: string, lsig: rtypes.LogicSig, flags: rtypes.TxParams): Promise<void> {
     this.assertCPNotDeleted({
       type: rtypes.TransactionType.OptInASA,
       sign: rtypes.SignType.LogicSignature,
@@ -282,7 +283,7 @@ class DeployerBasicMode {
    */
   async optInLsigToSSC (
     appID: number,
-    lsig: LogicSig,
+    lsig: rtypes.LogicSig,
     payFlags: rtypes.TxParams,
     flags: rtypes.SSCOptionalFlags): Promise<void> {
     this.assertCPNotDeleted({
@@ -463,7 +464,7 @@ export class DeployerDeployMode extends DeployerBasicMode implements Deployer {
   /**
    * Log transaction with message using txwriter
    */
-  logTx (message: string, txConfirmation: algosdk.ConfirmedTxInfo): void {
+  logTx (message: string, txConfirmation: algosdk.PendingTransactionResponse): void {
     this.txWriter.push(message, txConfirmation);
   }
 
@@ -674,7 +675,7 @@ export class DeployerRunMode extends DeployerBasicMode implements Deployer {
     });
   }
 
-  logTx (message: string, txConfirmation: algosdk.ConfirmedTxInfo): void {
+  logTx (message: string, txConfirmation: algosdk.PendingTransactionResponse): void {
     throw new BuilderError(ERRORS.BUILTIN_TASKS.DEPLOYER_EDIT_OUTSIDE_DEPLOY, {
       methodName: "logTx"
     });

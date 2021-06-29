@@ -2697,7 +2697,7 @@ describe("Teal Opcodes", function () {
         const appID = interpreter.runtime.ctx.tx.apid;
         const acc = interpreter.runtime.ctx.state.accounts.get(elonAddr) as AccountStoreI;
 
-        value = acc.getLocalState(appID, 'New-Key');
+        value = acc.getLocalState(appID as number, 'New-Key');
         assert.isDefined(value);
         assert.deepEqual(value, stringToBytes('New-Val'));
 
@@ -2709,7 +2709,7 @@ describe("Teal Opcodes", function () {
         op = new AppLocalPut([], 1, interpreter);
         op.execute(stack);
 
-        value = acc.getLocalState(appID, 'New-Key-1');
+        value = acc.getLocalState(appID as number, 'New-Key-1');
         assert.isDefined(value);
         assert.deepEqual(value, 2222n);
       });
@@ -2801,7 +2801,7 @@ describe("Teal Opcodes", function () {
 
         const appID = interpreter.runtime.ctx.tx.apid;
         let acc = interpreter.runtime.ctx.state.accounts.get(elonAddr) as AccountStoreI;
-        let value = acc.getLocalState(appID, 'Local-Key');
+        let value = acc.getLocalState(appID as number, 'Local-Key');
         assert.isUndefined(value); // value should be undefined
 
         // for Txn.Accounts[A]
@@ -2812,7 +2812,7 @@ describe("Teal Opcodes", function () {
         op.execute(stack);
 
         acc = interpreter.runtime.ctx.state.accounts.get(johnAddr) as AccountStoreI;
-        value = acc.getLocalState(appID, 'Local-Key');
+        value = acc.getLocalState(appID as number, 'Local-Key');
         assert.isUndefined(value); // value should be undefined
       });
     });

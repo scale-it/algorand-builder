@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@types/lodash.clonedeep": "^4.5.6",
-    "algosdk": "^1.9.1",
+    "algosdk": "scale-it/js-algorand-sdk.git#exportTypes",
     "glob": "^7.1.6",
     "js-sha256": "^0.9.0",
     "js-sha512": "^0.8.0",

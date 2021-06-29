@@ -1,5 +1,5 @@
 import { getPathFromDirRecursive } from "@algo-builder/runtime";
-import type { Algodv2, CompileOut } from "algosdk";
+import type { Algodv2, CompileResponse } from "algosdk";
 import { spawnSync, SpawnSyncReturns } from "child_process";
 import * as fs from 'fs';
 import * as murmurhash from 'murmurhash';
@@ -87,7 +87,7 @@ export class CompileOp {
     }
   }
 
-  callCompiler (code: string): Promise<CompileOut> {
+  callCompiler (code: string): Promise<CompileResponse> {
     return this.algocl.compile(code).do();
   }
 

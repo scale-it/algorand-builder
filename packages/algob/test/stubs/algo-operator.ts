@@ -1,6 +1,5 @@
 import { types as rtypes } from "@algo-builder/runtime";
-import type { LogicSig } from "algosdk";
-import { Account, Algodv2, AssetInfo, ConfirmedTxInfo } from "algosdk";
+import { Account, Algodv2, modelsv2, PendingTransactionResponse } from "algosdk";
 
 import { txWriter } from "../../src/internal/tx-log-writer";
 import { AlgoOperator } from "../../src/lib/algo-operator";
@@ -20,20 +19,20 @@ export class AlgoOperatorDryRunImpl implements AlgoOperator {
     throw new Error("Not implemented");
   }
 
-  getAssetByID (assetIndex: number | bigint): Promise<AssetInfo> {
+  getAssetByID (assetIndex: number | bigint): Promise<modelsv2.Asset> {
     return new Promise((resolve, reject) => {
       assetIndex === 1n ? resolve(mockAssetInfo) : reject(new Error("Not implemented"));
     });
   }
 
-  sendAndWait (rawTxns: Uint8Array | Uint8Array[]): Promise<ConfirmedTxInfo> {
+  sendAndWait (rawTxns: Uint8Array | Uint8Array[]): Promise<PendingTransactionResponse> {
     return new Promise((resolve, reject) => {
       resolve(mockConfirmedTx);
     });
   }
 
   /* eslint-disable sonarjs/no-identical-functions */
-  waitForConfirmation (txId: string): Promise<import("algosdk").ConfirmedTxInfo> {
+  waitForConfirmation (txId: string): Promise<PendingTransactionResponse> {
     return new Promise((resolve, reject) => {
       resolve(mockConfirmedTx);
     });
@@ -59,7 +58,7 @@ export class AlgoOperatorDryRunImpl implements AlgoOperator {
     return {
       creator: String(flags.funder.addr) + "-get-address-dry-run",
       contractAddress: "dfssdfsd",
-      lsig: {} as LogicSig
+      lsig: {} as rtypes.LogicSig
     };
   }
 
@@ -117,7 +116,7 @@ export class AlgoOperatorDryRunImpl implements AlgoOperator {
   }
 
   optInLsigToASA (
-    asaName: string, assetIndex: number, lsig: LogicSig, flags: rtypes.TxParams
+    asaName: string, assetIndex: number, lsig: rtypes.LogicSig, flags: rtypes.TxParams
   ): Promise<void> {
     return new Promise((resolve, reject) => { resolve(); });
   }
@@ -129,7 +128,7 @@ export class AlgoOperatorDryRunImpl implements AlgoOperator {
   }
 
   optInLsigToSSC (
-    appID: number, lsig: LogicSig,
+    appId: number, lsig: rtypes.LogicSig,
     payFlags: rtypes.TxParams, flags: rtypes.SSCOptionalFlags): Promise<void> {
     return new Promise((resolve, reject) => { resolve(); });
   }

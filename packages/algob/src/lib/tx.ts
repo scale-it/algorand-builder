@@ -67,15 +67,15 @@ export function makeAssetCreateTxn (
     flags.creator.addr,
     note,
     BigInt(asaDef.total),
-    asaDef.decimals,
-    asaDef.defaultFrozen,
-    asaDef.manager,
-    asaDef.reserve,
-    asaDef.freeze,
-    asaDef.clawback,
-    asaDef.unitName,
+    Number(asaDef.decimals),
+    asaDef.defaultFrozen ? asaDef.defaultFrozen : false,
+    asaDef.manager ? asaDef.manager : "",
+    asaDef.reserve ? asaDef.reserve : "",
+    asaDef.freeze ? asaDef.freeze : "",
+    asaDef.clawback ? asaDef.clawback : "",
+    asaDef.unitName ? asaDef.unitName : "",
     name,
-    asaDef.url,
+    asaDef.url ? asaDef.url : "",
     asaDef.metadataHash,
     txSuggestedParams
   );
@@ -176,7 +176,7 @@ async function mkTx (
       const clear = await deployer.ensureCompiled(txn.clearProgram);
       txn.approvalProg = new Uint8Array(Buffer.from(approval.compiled, "base64"));
       txn.clearProg = new Uint8Array(Buffer.from(clear.compiled, "base64"));
-      txIdxMap.set(index, [name, { total: 1, decimals: 1, unitName: "MOCK" }]);
+      txIdxMap.set(index, [name, { total: 1, decimals: 1, unitName: "MOCK", defaultFrozen: false }]);
       break;
     }
     case rtypes.TransactionType.UpdateSSC: {
@@ -185,7 +185,7 @@ async function mkTx (
       const clear = await deployer.ensureCompiled(txn.newClearProgram);
       txn.approvalProg = new Uint8Array(Buffer.from(approval.compiled, "base64"));
       txn.clearProg = new Uint8Array(Buffer.from(clear.compiled, "base64"));
-      txIdxMap.set(index, [cpKey, { total: 1, decimals: 1, unitName: "MOCK" }]);
+      txIdxMap.set(index, [cpKey, { total: 1, decimals: 1, unitName: "MOCK", defaultFrozen: false }]);
       break;
     }
     case rtypes.TransactionType.ModifyAsset: {
@@ -222,7 +222,7 @@ async function mkTx (
 export async function executeTransaction (
   deployer: Deployer,
   execParams: rtypes.ExecParams | rtypes.ExecParams[]):
-  Promise<algosdk.ConfirmedTxInfo> {
+  Promise<algosdk.PendingTransactionResponse> {
   deployer.assertCPNotDeleted(execParams);
   try {
     let signedTxn;
@@ -268,7 +268,7 @@ export async function executeTransaction (
  */
 export async function executeSignedTxnFromFile (
   deployer: Deployer,
-  fileName: string): Promise<algosdk.ConfirmedTxInfo> {
+  fileName: string): Promise<algosdk.PendingTransactionResponse> {
   const signedTxn = loadSignedTxnFromFile(fileName);
   if (signedTxn === undefined) { throw new Error(`File ${fileName} does not exist`); }
 

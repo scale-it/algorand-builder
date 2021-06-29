@@ -1,4 +1,3 @@
-import { LogicSig } from "algosdk";
 import { assert } from "chai";
 import sinon from "sinon";
 
@@ -7,7 +6,7 @@ import { RUNTIME_ERRORS } from "../../src/errors/errors-list";
 import { ASSET_CREATION_FEE } from "../../src/lib/constants";
 import { Runtime } from "../../src/runtime";
 import type { AlgoTransferParam, AssetModFields, AssetTransferParam, DestroyAssetParam, ExecParams, FreezeAssetParam, ModifyAssetParam, RevokeAssetParam } from "../../src/types";
-import { SignType, TransactionType } from "../../src/types";
+import { LogicSig, SignType, TransactionType } from "../../src/types";
 import { getProgram } from "../helpers/files";
 import { useFixture } from "../helpers/integration";
 import { expectRuntimeError } from "../helpers/runtime-errors";

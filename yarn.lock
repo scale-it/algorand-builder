@@ -568,8 +568,7 @@ algo-msgpack-with-bigint@^2.1.0:
 
 algosdk@^1.9.1:
   version "1.9.1"
-  resolved "https://registry.yarnpkg.com/algosdk/-/algosdk-1.9.1.tgz#bc1ba4c0f763ac2bf50b3d9da3964b43496cac80"
-  integrity sha512-sKTnovuGI5R1S2qmXSpPTS/wjgGj0+DQ0nyIui5R0TV9dPK0FBr+CL5jfjnEr0HX2QTAKUPa6bd+TgkjYMFH0A==
+  resolved "git://github.com/scale-it/js-algorand-sdk.git#cad74ba6428d0ecc1c24688f8bd2f856b1e28cea"
   dependencies:
     algo-msgpack-with-bigint "^2.1.0"
     buffer "^6.0.2"
@@ -581,6 +580,20 @@ algosdk@^1.9.1:
     superagent "^6.1.0"
     tweetnacl "^1.0.3"
     url-parse "^1.5.1"
+
+algosdk@algorand/js-algorand-sdk.git#9a5824782511dff1f521c68fe54d562b3872d1ae:
+  version "1.8.1"
+  resolved "https://codeload.github.com/algorand/js-algorand-sdk/tar.gz/9a5824782511dff1f521c68fe54d562b3872d1ae"
+  dependencies:
+    algo-msgpack-with-bigint "^2.1.0"
+    buffer "^6.0.2"
+    hi-base32 "^0.5.0"
+    js-sha256 "^0.9.0"
+    js-sha3 "^0.8.0"
+    js-sha512 "^0.8.0"
+    json-bigint "^1.0.0"
+    superagent "^6.1.0"
+    tweetnacl "^1.0.3"
 
 ansi-colors@4.1.1, ansi-colors@^4.1.1:
   version "4.1.1"

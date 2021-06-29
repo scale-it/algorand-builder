@@ -1,5 +1,5 @@
-import { getPathFromDirRecursive } from "@algo-builder/runtime";
-import type { Account, LogicSig, MultiSig, TxSig } from "algosdk";
+import { getPathFromDirRecursive, types as rtypes } from "@algo-builder/runtime";
+import type { Account, EncodedMultisig, EncodedSignedTransaction } from "algosdk";
 import { appendSignMultisigTransaction, decodeAddress, decodeSignedTransaction, encodeAddress, logicSigFromByte } from "algosdk";
 import fs from "fs";
 
@@ -13,7 +13,7 @@ const lsigExt = ".lsig";
  * @param {String} name : multisig filename
  * @returns {MultiSig} : decoded msig (object with decoded public keys and their signatures)
  */
-export async function decodeMsigObj (msig: string): Promise<MultiSig> {
+export async function decodeMsigObj (msig: string): Promise<EncodedMultisig> {
   const parsedMsig = JSON.parse(msig).msig;
   validateMsig(parsedMsig);
 
@@ -33,7 +33,7 @@ export async function decodeMsigObj (msig: string): Promise<MultiSig> {
  * @param {string} msig : multisigned msig obj
  * @returns {MultiSig} : decoded Msig Object
  */
-export async function readMsigFromFile (filename: string): Promise<MultiSig | undefined> {
+export async function readMsigFromFile (filename: string): Promise<EncodedMultisig | undefined> {
   if (!filename.endsWith(lsigExt)) {
     throw new Error(`filename "${filename}" must end with "${lsigExt}"`);
   }
@@ -71,20 +71,20 @@ export async function readBinaryMultiSig (filename: string): Promise<string | un
  * @param {string} name filename
  * @returns {LogicSig} signed logic signature from assets/<file_name>.blsig
  */
-export async function loadBinaryLsig (name: string): Promise<LogicSig> {
+export async function loadBinaryLsig (name: string): Promise<rtypes.LogicSig> {
   const data = await readBinaryMultiSig(name);
   if (data === undefined) {
     throw new Error(`File ${name} does not exist`);
   }
   const program = new Uint8Array(Buffer.from(data, 'base64'));
-  return logicSigFromByte(program);
+  return logicSigFromByte(program) as rtypes.LogicSig;
 }
 
 /**
  * Validates msig by checking for v and thr field
  * @param {MultiSig} msig
  */
-export function validateMsig (msig: MultiSig | undefined): void {
+export function validateMsig (msig: EncodedMultisig | undefined): void {
   if (msig === undefined || msig.v === undefined || msig.thr === undefined) {
     throw new Error("Error fetching multisigned logic signature from file - invalid/undefined msig");
   }
@@ -96,7 +96,8 @@ export function validateMsig (msig: MultiSig | undefined): void {
  * @param  rawTxn
  * @returns signed transaction object
  */
-export function signMultiSig (signerAccount: Account, rawTxn: Uint8Array): TxSig {
+/*export function signMultiSig (signerAccount: Account, rawTxn: Uint8Array):
+  { txID: string, blob: Uint8Array} {
   const decodedTxn = decodeSignedTransaction(rawTxn);
   console.debug("Decoded txn before signing: %O", decodedTxn);
   validateMsig(decodedTxn.msig);
@@ -115,4 +116,4 @@ export function signMultiSig (signerAccount: Account, rawTxn: Uint8Array): TxSig
   console.debug("Decoded txn after successfully signing: %O", decodedSignedTxn);
   console.log("Msig: %O", decodedSignedTxn.msig);
   return signedTxn;
-}
+}*/

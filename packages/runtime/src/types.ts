@@ -1,10 +1,11 @@
 import {
   Account as AccountSDK,
-  AssetDef,
-  LogicSig,
-  LogicSigArgs,
-  SSCSchemaConfig,
-  TxnEncodedObj
+  ApplicationStateSchema,
+  AssetParams,
+  EncodedLogicSig,
+  EncodedMultisig,
+  EncodedTransaction,
+  MultisigMetadata
 } from "algosdk";
 import * as z from 'zod';
 
@@ -25,7 +26,7 @@ export type AppArgs = Array<string | number>;
 export type StackElem = bigint | Uint8Array;
 export type TEALStack = IStack<bigint | Uint8Array>;
 
-export interface Txn extends TxnEncodedObj {
+export interface Txn extends EncodedTransaction {
   txID: string
 }
 
@@ -105,7 +106,7 @@ export interface Context {
   state: State
   tx: Txn // current txn
   gtxs: Txn[] // all transactions
-  args: Uint8Array[]
+  args?: Uint8Array[]
   debugStack?: number //  max number of top elements from the stack to print after each opcode execution.
   getAccount: (address: string) => AccountStoreI
   getAssetAccount: (assetId: number) => AccountStoreI
@@ -145,7 +146,7 @@ export interface AssetHoldingM {
 export interface AppLocalStateM {
   id: number
   'key-value': Map<string, StackElem> // string represents bytes as string eg. 11,22,34
-  schema: SSCSchemaConfig
+  schema: ApplicationStateSchema
 }
 
 // custom SSCAttributes for AccountStore (using maps instead of array in 'global-state')
@@ -154,8 +155,8 @@ export interface SSCAttributesM {
   'clear-state-program': string
   creator: string
   'global-state': Map<string, StackElem>
-  'global-state-schema': SSCSchemaConfig
-  'local-state-schema': SSCSchemaConfig
+  'global-state-schema': ApplicationStateSchema
+  'local-state-schema': ApplicationStateSchema
 }
 
 // custom CreatedApp for AccountStore
@@ -172,9 +173,9 @@ export interface AccountStoreI {
   amount: bigint
   minBalance: number
   appsLocalState: Map<number, AppLocalStateM>
-  appsTotalSchema: SSCSchemaConfig
+  appsTotalSchema: ApplicationStateSchema
   createdApps: Map<number, SSCAttributesM>
-  createdAssets: Map<number, AssetDef>
+  createdAssets: Map<number, AssetParams>
   account: AccountSDK
 
   balance: () => bigint
@@ -182,9 +183,9 @@ export interface AccountStoreI {
   getAppFromLocal: (appID: number) => AppLocalStateM | undefined
   addApp: (appID: number, params: SSCDeploymentFlags,
     approvalProgram: string, clearProgram: string) => CreatedAppM
-  getAssetDef: (assetId: number) => AssetDef | undefined
+  getAssetDef: (assetId: number) => AssetParams | undefined
   getAssetHolding: (assetId: number) => AssetHoldingM | undefined
-  addAsset: (assetId: number, name: string, asadef: ASADef) => AssetDef
+  addAsset: (assetId: number, name: string, asadef: ASADef) => AssetParams
   modifyAsset: (assetId: number, fields: AssetModFields) => void
   closeAsset: (assetId: number) => void
   setFreezeState: (assetId: number, state: boolean) => void
@@ -332,7 +333,7 @@ interface SignWithLsig {
   fromAccountAddr: AccountAddress
   lsig: LogicSig
   /** stateless smart contract args */
-  args?: LogicSigArgs
+  args?: Uint8Array[]
 }
 
 export type Sign = SignWithSk | SignWithLsig;
@@ -469,4 +470,35 @@ export enum DecodingMode {
   SAFE = 'safe',
   MIXED = 'mixed',
   BIGINT = 'bigint'
+}
+
+interface LogicSigStorageStructure {
+  tag: Buffer
+  logic: Uint8Array
+  args: Uint8Array[]
+  sig?: Uint8Array
+  msig?: EncodedMultisig
+}
+
+/** Algosdk types */
+export interface LogicSig extends LogicSigStorageStructure {
+
+  get_obj_for_encoding: () => EncodedLogicSig
+  from_obj_for_encoding: (encoded: EncodedLogicSig) => LogicSig
+
+  // Performs signature verification
+  verify: (msg: Uint8Array) => boolean
+  // Compute hash of the logic sig program (that is the same as escrow account address) as string address
+  address: () => string
+  // Creates signature (if no msig provided) or multi signature otherwise
+  sign: (secretKey: Uint8Array, msig?: MultisigMetadata) => void
+  // Signs and appends a signature
+  appendToMultisig: (secretKey: Uint8Array) => void
+  // signs and returns program signature, without appending it to this object
+  signProgram: (secretKey: Uint8Array) => Uint8Array
+  singleSignMultisig: (secretKey: Uint8Array, msig: EncodedMultisig) => [Uint8Array, number]
+  // serializes and encodes the LogicSig
+  toByte: () => Uint8Array
+  // deserializes a LogicSig which was serialized using toByte()
+  fromByte: (encoded: Uint8Array) => LogicSig
 }

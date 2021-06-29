@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "@algo-builder/runtime": "^1.1.0",
-    "algosdk": "^1.9.1",
+    "algosdk": "scale-it/js-algorand-sdk.git#exportTypes",
     "chalk": "^4.1.0",
     "debug": "^4.1.1",
     "deep-equal": "^2.0.3",

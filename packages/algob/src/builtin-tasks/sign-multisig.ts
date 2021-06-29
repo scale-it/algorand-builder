@@ -4,7 +4,7 @@ import path from "path";
 import { task } from "../internal/core/config/config-env";
 import { ASSETS_DIR } from "../internal/core/project-structure";
 import { loadSignedTxnFromFile } from "../lib/files";
-import { signMultiSig } from "../lib/msig";
+//import { signMultiSig } from "../lib/msig";
 import { RuntimeEnv } from "../types";
 import { writeToFile } from "./gen-accounts";
 import { TASK_SIGN_MULTISIG } from "./task-names";
@@ -16,7 +16,7 @@ export interface TaskArgs {
   force: boolean
 }
 
-async function multiSignTx (
+/*async function multiSignTx (
   taskArgs: TaskArgs,
   runtimeEnv: RuntimeEnv
 ): Promise<void> {
@@ -53,4 +53,4 @@ export default function (): void {
     )
     .addFlag("force", "Overwrite output transaction file if the file already exists.")
     .setAction((input, env) => multiSignTx(input, env));
-}
+}*/

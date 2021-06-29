@@ -1,4 +1,4 @@
-import type { AssetDef } from "algosdk";
+import type { AssetParams } from "algosdk";
 import { existsSync } from "fs";
 import path from "path";
 import * as z from 'zod';
@@ -130,7 +130,7 @@ function isDefined (value: string | undefined): boolean {
  * @param fields Custom ASA fields
  * @param asset Defined ASA fields
  */
-export function checkAndSetASAFields (fields: AssetModFields, asset: AssetDef): void {
+export function checkAndSetASAFields (fields: AssetModFields, asset: AssetParams): void {
   for (const x of ['manager', 'reserve', 'freeze', 'clawback']) {
     const customField = fields[x as keyof AssetModFields];
     const asaField = asset[x as keyof AssetModFields];

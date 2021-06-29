@@ -12,7 +12,7 @@ import { globalZeroAddress } from "./lib/constants";
 import { algodCredentialsFromEnv, KMDCredentialsFromEnv } from "./lib/credentials";
 import { getProgram } from "./lib/load-program";
 import { signLogicSigMultiSig } from "./lib/lsig";
-import { signMultiSig } from "./lib/msig";
+//import { signMultiSig } from "./lib/msig";
 import { balanceOf, printAssets, printGlobalStateSSC, printLocalStateSSC, readGlobalStateSSC, readLocalStateSSC } from "./lib/status";
 import { executeSignedTxnFromFile, executeTransaction, getSuggestedParams, mkTxParams } from "./lib/tx";
 import * as runtime from "./runtime";
@@ -40,7 +40,7 @@ export {
   globalZeroAddress,
   getProgram,
   types,
-  signMultiSig,
+  //signMultiSig,
   signLogicSigMultiSig,
   runtime,
   convert

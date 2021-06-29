@@ -41,7 +41,7 @@ export const TXN_OBJ = {
   apar: {
     t: 10,
     dc: 0,
-    df: 1,
+    df: false,
     m: Buffer.from(addr.publicKey),
     r: Buffer.from(addr.publicKey),
     f: Buffer.from(addr.publicKey),

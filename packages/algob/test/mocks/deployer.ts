@@ -1,5 +1,4 @@
 import { types as rtypes } from "@algo-builder/runtime";
-import type { LogicSig } from "algosdk";
 import * as algosdk from "algosdk";
 
 import type {
@@ -51,11 +50,11 @@ export class FakeDeployer implements Deployer {
     throw new Error("Not implemented");
   }
 
-  logTx (message: string, txConfirmation: algosdk.ConfirmedTxInfo): void {
+  logTx (message: string, txConfirmation: algosdk.PendingTransactionResponse): void {
     throw new Error("Not implemented");
   }
 
-  sendAndWait (rawTxns: Uint8Array | Uint8Array[]): Promise<algosdk.ConfirmedTxInfo> {
+  sendAndWait (rawTxns: Uint8Array | Uint8Array[]): Promise<algosdk.PendingTransactionResponse> {
     throw new Error("Not implemented");
   }
 
@@ -95,11 +94,11 @@ export class FakeDeployer implements Deployer {
     throw new Error("Not implemented");
   }
 
-  async loadLogic (name: string, scInitParam?: unknown): Promise<LogicSig> {
+  async loadLogic (name: string, scInitParam?: unknown): Promise<rtypes.LogicSig> {
     throw new Error("Not implemented");
   }
 
-  loadMultiSig (name: string): Promise<LogicSig> {
+  loadMultiSig (name: string): Promise<rtypes.LogicSig> {
     throw new Error("Not implemented");
   }
 
@@ -163,11 +162,11 @@ export class FakeDeployer implements Deployer {
     throw new Error("Not implemented");
   };
 
-  getAssetByID (assetIndex: number | bigint): Promise<algosdk.AssetInfo> {
+  getAssetByID (assetIndex: number | bigint): Promise<algosdk.modelsv2.Asset> {
     throw new Error("Not implemented");
   }
 
-  waitForConfirmation (txId: string): Promise<algosdk.ConfirmedTxInfo> {
+  waitForConfirmation (txId: string): Promise<algosdk.PendingTransactionResponse> {
     throw new Error("Not implemented");
   }
 
@@ -175,7 +174,7 @@ export class FakeDeployer implements Deployer {
     throw new Error("Not implemented");
   }
 
-  optInLsigToASA (asa: string, lsig: LogicSig, flags: rtypes.TxParams): Promise<void> {
+  optInLsigToASA (asa: string, lsig: rtypes.LogicSig, flags: rtypes.TxParams): Promise<void> {
     throw new Error("Not implemented");
   }
 
@@ -186,7 +185,7 @@ export class FakeDeployer implements Deployer {
   }
 
   optInLsigToSSC (
-    appID: number, lsig: LogicSig,
+    appID: number, lsig: rtypes.LogicSig,
     payFlags: rtypes.TxParams, flags: rtypes.SSCOptionalFlags): Promise<void> {
     throw new Error("not implemented.");
   }

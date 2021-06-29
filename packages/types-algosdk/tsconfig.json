@@ -1,9 +1,0 @@
-{
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "files": [
-    "./types/index.d.ts"
-  ]
-}

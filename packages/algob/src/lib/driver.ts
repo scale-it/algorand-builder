@@ -16,7 +16,7 @@ export function createClient (n: Network): algosdk.Algodv2 {
   if (n.name !== ALGOB_CHAIN_NAME) {
     const cfg = n.config as HttpNetworkConfig;
     const algodv2 = new algosdk.Algodv2(cfg.token, _parseHost(cfg.host), cfg.port);
-    algodv2.setIntEncoding('mixed'); // to support values > Number.MAX_SAFE_INTEGER
+    algodv2.setIntEncoding(algosdk.IntDecoding.MIXED); // to support values > Number.MAX_SAFE_INTEGER
     return algodv2;
   }
   throw Error("Initializing SDK driver for AlgobChain is not supported yet");

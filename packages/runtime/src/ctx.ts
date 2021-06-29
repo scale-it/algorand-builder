@@ -1,4 +1,4 @@
-import { AssetDef, makeAssetTransferTxnWithSuggestedParams } from "algosdk";
+import { AssetParams, makeAssetTransferTxnWithSuggestedParams } from "algosdk";
 
 import { getFromAddress, Runtime } from ".";
 import { RUNTIME_ERRORS } from "./errors/errors-list";
@@ -6,7 +6,7 @@ import { RuntimeError } from "./errors/runtime-errors";
 import { ASSET_CREATION_FEE } from "./lib/constants";
 import { mockSuggestedParams } from "./mock/tx";
 import {
-  AccountAddress, AccountStoreI, AlgoTransferParam, ASADeploymentFlags, AssetHoldingM, AssetModFields,
+  AccountAddress, AccountStoreI, AlgoTransferParam, ASADef, ASADeploymentFlags, AssetHoldingM, AssetModFields,
   AssetTransferParam, Context, ExecParams, ExecutionMode,
   SignType, SSCAttributesM, SSCDeploymentFlags,
   State, TransactionType, Txn, TxParams
@@ -80,7 +80,7 @@ export class Ctx implements Context {
    * Returns Asset Definitions
    * @param assetId Asset Index
    */
-  getAssetDef (assetId: number): AssetDef {
+  getAssetDef (assetId: number): AssetParams {
     const creatorAcc = this.getAssetAccount(assetId);
     const assetDef = creatorAcc.getAssetDef(assetId);
     return this.runtime.assertAssetDefined(assetId, assetDef);
@@ -183,7 +183,7 @@ export class Ctx implements Context {
       amount: 0n,
       'asset-id': assetIndex,
       creator: assetDef.creator,
-      'is-frozen': assetDef.defaultFrozen
+      'is-frozen': assetDef.defaultFrozen ? assetDef.defaultFrozen : false
     };
     const account = this.getAccount(address);
     account.optInToASA(assetIndex, assetHolding);

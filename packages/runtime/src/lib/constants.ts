@@ -1,4 +1,4 @@
-import { AssetDefEnc, StateSchemaEnc, TxnEncodedObj } from "algosdk";
+import { EncodedAssetParams, EncodedTransaction, EncodedLocalStateSchema } from "algosdk";
 
 export const MIN_UINT64 = 0n;
 export const MAX_UINT64 = 0xFFFFFFFFFFFFFFFFn;
@@ -35,7 +35,7 @@ const zeroByte = new Uint8Array(0);
 
 // keys with value as null does not represent a txn/global field, these are handled explicitly
 // in txn.ts using switch
-type keyOfEncTx = keyof TxnEncodedObj | keyof AssetDefEnc | keyof StateSchemaEnc;
+type keyOfEncTx = keyof EncodedTransaction | keyof EncodedAssetParams | keyof EncodedLocalStateSchema;
 
 // https://developer.algorand.org/docs/reference/teal/opcodes/#txn
 // transaction fields supported by teal v1
