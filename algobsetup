@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+BASEDIR=$(pwd)
+ALGO_BUILDER_DIR="algo-builder"
+declare -a PACKAGES=("algob" "runtime" "types-algosdk")
+declare -a LINKED_PACKAGES=("@algo-builder/algob" "@algo-builder/runtime" "@algo-builder/types-algosdk")
+
+function err () {
+  printf "$1\n"
+  exit 1
+}
+
+function check_dir_and_delete(){
+    if [[ -d $1 ]]
+    then
+        echo "$1 already exists in this project, deleting it now..."
+        rm -rf $1    
+    fi
+}
+
+function link(){
+    if [ -d "$1" ] 
+    then
+        cd $1
+        yarn link
+    else
+        cd $BASEDIR
+        yarn link $1;
+    fi
+    
+}
+
+function link_all(){
+    for (( i=0; i<${#PACKAGES[@]}; i++ ));
+    do
+        link "$BASEDIR/$ALGO_BUILDER_DIR/packages/${PACKAGES[$i]}"
+    done
+
+    cd $BASEDIR
+
+    for (( i=0; i<${#LINKED_PACKAGES[@]}; i++ ));
+    do
+        link ${LINKED_PACKAGES[$i]}
+    done
+}
+
+
+check_dir_and_delete $ALGO_BUILDER_DIR
+git clone https://github.com/scale-it/algo-builder.git
+if [ $? -ne 0 ]; then
+    err "Error while cloning algo-builder"
+fi
+cd $ALGO_BUILDER_DIR
+yarn
+yarn build
+rm -rf ~/.config/yarn/link/@algo-builder
+while true; do
+    read -p "Do you wish to link also ${PACKAGES[1]} and ${PACKAGES[2]}? [yes/no] " yn
+    case $yn in
+        [Yy]* ) 
+            link_all
+            break;;
+        [Nn]* ) 
+            link "$BASEDIR/$ALGO_BUILDER_DIR/packages/algob";
+            link ${LINKED_PACKAGES[0]}
+            exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
