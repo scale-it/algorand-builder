@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@algo-builder/runtime</title>
+	<meta name="description" content="Documentation for @algo-builder/runtime">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@algo-builder/runtime</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>@algo-builder/runtime</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#runtime" id="runtime" style="color: inherit; text-decoration: none;">
+					<h1>Runtime</h1>
+				</a>
+				<p>This package implements a light version of Algorand runtime. It allows to executes transactions and processes TEAL in JavaScript environment. The packages provides 4 main object:</p>
+				<ul>
+					<li><a href="https://github.com/scale-it/algo-builder/blob/master/packages/runtime/src/runtime.ts">Runtime</a>: handles transaction or txn group processing and state management . User can use a <code>Runtime</code> object to set up accounts, create applications, opt-in to app, update app, etc...</li>
+					<li><a href="https://github.com/scale-it/algo-builder/blob/master/packages/runtime/src/account.ts">AccountStore</a>: user can create new accounts using a <code>AccountStore</code> object. All information about an account (<code>apps</code>, <code>assets</code>, <code>localState</code>, <code>globalState</code> etc..) is stored in <code>AccountStore</code>.</li>
+					<li><a href="https://github.com/scale-it/algo-builder/tree/master/packages/runtime/src/parser">Parser</a>: reads TEAL code and converts it to a list of opcodes which are executable by the interpreter. If a teal code contains an invalid opcode/data, parser will throw an error.</li>
+					<li><a href="https://github.com/scale-it/algo-builder/tree/master/packages/runtime/src/interpreter">Interpreter</a>: executes a list of opcodes returned by parser. Interpreter creates teal execution stack and interacts with runtime to perform changes related a TEAL code execution. At the end of execution, if the stack contains a single non-zero uint64 element then the teal code is approved, and transaction can be executed.</li>
+				</ul>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
+				<ul>
+					<li><a href="https://scale-it.github.io/algo-builder">Home Page</a></li>
+					<li><a href="https://scale-it.github.io/algo-builder/api/algob/index.html">Algob API Docs</a></li>
+					<li><a href="https://scale-it.github.io/algo-builder/guide/README">User Docs</a></li>
+				</ul>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p><code>@algo-builder/runtime</code> can be included as a library using <code>yarn add @algo-builder/runtime</code> and then import it using <code>import * from &#39;@algo-builder/runtime&#39;</code>.</p>
+				<p>Please read more about usage of <code>runtime</code> from <a href="https://scale-it.github.io/algo-builder/guide/testing-teal.html">here</a>.</p>
+				<a href="#what-we-support-now" id="what-we-support-now" style="color: inherit; text-decoration: none;">
+					<h2>What we support now</h2>
+				</a>
+				<p><code>runtime</code> supports:</p>
+				<ul>
+					<li><p>Prepare account state for teal execution.</p>
+					</li>
+					<li><p>Stateless TEAL - Approve/Reject logic.</p>
+					</li>
+					<li><p>Stateful TEAL - Update and verify global/local states if teal logic is correct.</p>
+					</li>
+					<li><p>Transactions to</p>
+						<ul>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#create"><code>create</code> an application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#opt-in"><code>opt-in</code> to application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#call-noop"><code>call</code> application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#update"><code>update</code> application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#delete"><code>delete</code> application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#close-out"><code>closeout</code> from an application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/asc1/stateful/sdks/#clear-state"><code>clearState</code> of application</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/transactions/#create-an-asset"><code>create</code> an asset</a></li>
+							<li><a href="https://developer.algorand.org/docs/features/transactions/#asset-transfer-transaction"><code>opt-in</code> to asset</a></li>
+							<li><a href="https://developer.algorand.org/docs/reference/transactions/#asset-transfer-transaction"><code>transfer</code> an asset</a></li>
+						</ul>
+					</li>
+					<li><p>Full transaction processing for type <code>payment</code>, <code>application call</code></p>
+					</li>
+					<li><p>Asset related transactions:</p>
+						<ul>
+							<li><a href="https://developer.algorand.org/docs/reference/transactions/#asset-configuration-transaction">Asset Destroy</a></li>
+							<li><a href="https://developer.algorand.org/docs/reference/transactions/#asset-clawback-transaction">Asset Revoke</a></li>
+							<li><a href="https://developer.algorand.org/docs/reference/transactions/#asset-freeze-transaction">Asset Freeze</a></li>
+							<li><a href="https://developer.algorand.org/docs/reference/transactions/#asset-configuration-transaction">Asset Configuration</a></li>
+						</ul>
+					</li>
+				</ul>
+				<p>STATUS: production ready.</p>
+				<a href="#coming-soon" id="coming-soon" style="color: inherit; text-decoration: none;">
+					<h2>Coming Soon</h2>
+				</a>
+				<p>TEAL v3 Support</p>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>Please read the main <a href="https://github.com/scale-it/algo-builder/blob/master/README.md">README</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/errors.html">ERRORS</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/types.html">types</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/accountstore.html" class="tsd-kind-icon">Account<wbr>Store</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/interpreter.html" class="tsd-kind-icon">Interpreter</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/runtime.html" class="tsd-kind-icon">Runtime</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#addresstopk" class="tsd-kind-icon">address<wbr>ToPk</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#applyerrormessagetemplate" class="tsd-kind-icon">apply<wbr>Error<wbr>Message<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#checkifassetdeletiontx" class="tsd-kind-icon">check<wbr>IfAsset<wbr>Deletion<wbr>Tx</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#encodenote" class="tsd-kind-icon">encode<wbr>Note</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getfromaddress" class="tsd-kind-icon">get<wbr>From<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getpathfromdirrecursive" class="tsd-kind-icon">get<wbr>Path<wbr>From<wbr>Dir<wbr>Recursive</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#loadasafile" class="tsd-kind-icon">loadASAFile</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#loadfromyamlfilesilent" class="tsd-kind-icon">load<wbr>From<wbr>Yaml<wbr>File<wbr>Silent</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#loadfromyamlfilesilentwithmessage" class="tsd-kind-icon">load<wbr>From<wbr>Yaml<wbr>File<wbr>Silent<wbr>With<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#lstreewalk" class="tsd-kind-icon">ls<wbr>Tree<wbr>Walk</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#mktransaction" class="tsd-kind-icon">mk<wbr>Transaction</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#overrideasadef" class="tsd-kind-icon">overrideASADef</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#parsesscappargs" class="tsd-kind-icon">parseSSCApp<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#parsezoderror" class="tsd-kind-icon">parse<wbr>Zod<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#parser" class="tsd-kind-icon">parser</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#stringtobytes" class="tsd-kind-icon">string<wbr>ToBytes</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#uint64tobigendian" class="tsd-kind-icon">uint64<wbr>ToBig<wbr>Endian</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#validateasadefs" class="tsd-kind-icon">validateASADefs</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

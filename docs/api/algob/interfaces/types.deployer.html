@@ -1,0 +1,1637 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Deployer | @algo-builder/algob</title>
+	<meta name="description" content="Documentation for @algo-builder/algob">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@algo-builder/algob</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">@algo-builder/algob</a>
+				</li>
+				<li>
+					<a href="../modules/types.html">types</a>
+				</li>
+				<li>
+					<a href="types.deployer.html">Deployer</a>
+				</li>
+			</ul>
+			<h1>Interface Deployer</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Deployer</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#accounts" class="tsd-kind-icon">accounts</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#accountsbyname" class="tsd-kind-icon">accounts<wbr>ByName</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#addcheckpointkv" class="tsd-kind-icon">add<wbr>CheckpointKV</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#algodclient" class="tsd-kind-icon">algod<wbr>Client</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#asa" class="tsd-kind-icon">asa</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#assertcpnotdeleted" class="tsd-kind-icon">assertCPNot<wbr>Deleted</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#assertnoasset" class="tsd-kind-icon">assert<wbr>NoAsset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#checkpoint" class="tsd-kind-icon">checkpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#deployasa" class="tsd-kind-icon">deployASA</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#deployssc" class="tsd-kind-icon">deploySSC</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#ensurecompiled" class="tsd-kind-icon">ensure<wbr>Compiled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#fundlsig" class="tsd-kind-icon">fund<wbr>Lsig</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#getasadef" class="tsd-kind-icon">getASADef</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#getasainfo" class="tsd-kind-icon">getASAInfo</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#getassetbyid" class="tsd-kind-icon">get<wbr>Asset<wbr>ByID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#getcheckpointkv" class="tsd-kind-icon">get<wbr>CheckpointKV</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#getdelegatedlsig" class="tsd-kind-icon">get<wbr>Delegated<wbr>Lsig</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#getssc" class="tsd-kind-icon">getSSC</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#isdefined" class="tsd-kind-icon">is<wbr>Defined</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#isdeploymode" class="tsd-kind-icon">is<wbr>Deploy<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#loadasadef" class="tsd-kind-icon">loadASADef</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#loadlogic" class="tsd-kind-icon">load<wbr>Logic</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#loadmultisig" class="tsd-kind-icon">load<wbr>Multi<wbr>Sig</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#log" class="tsd-kind-icon">log</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#logtx" class="tsd-kind-icon">log<wbr>Tx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#mkdelegatedlsig" class="tsd-kind-icon">mk<wbr>Delegated<wbr>Lsig</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#optinaccounttossc" class="tsd-kind-icon">opt<wbr>InAccount<wbr>ToSSC</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#optinacounttoasa" class="tsd-kind-icon">opt<wbr>InAcount<wbr>ToASA</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#optinlsigtoasa" class="tsd-kind-icon">opt<wbr>InLsig<wbr>ToASA</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#optinlsigtossc" class="tsd-kind-icon">opt<wbr>InLsig<wbr>ToSSC</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#persistcp" class="tsd-kind-icon">persistCP</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#registerasainfo" class="tsd-kind-icon">registerASAInfo</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#registersscinfo" class="tsd-kind-icon">registerSSCInfo</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#sendandwait" class="tsd-kind-icon">send<wbr>And<wbr>Wait</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#updatessc" class="tsd-kind-icon">updateSSC</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="types.deployer.html#waitforconfirmation" class="tsd-kind-icon">wait<wbr>For<wbr>Confirmation</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="accounts" class="tsd-anchor"></a>
+					<h3>accounts</h3>
+					<div class="tsd-signature tsd-kind-icon">accounts<span class="tsd-signature-symbol">:</span> <a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L399">algob/src/types.ts:399</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="accountsbyname" class="tsd-anchor"></a>
+					<h3>accounts<wbr>ByName</h3>
+					<div class="tsd-signature tsd-kind-icon">accounts<wbr>ByName<span class="tsd-signature-symbol">:</span> <a href="../modules/runtime.types.html#accountmap" class="tsd-signature-type" data-tsd-kind="Type alias">AccountMap</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L400">algob/src/types.ts:400</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="addcheckpointkv" class="tsd-anchor"></a>
+					<h3>add<wbr>CheckpointKV</h3>
+					<div class="tsd-signature tsd-kind-icon">add<wbr>CheckpointKV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L414">algob/src/types.ts:414</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Sets metadata key value for a current network in the chckpoint file based on the
+													current deployment script. If run in a non deployment mode (eg <code>algob run script_name.js</code>)
+												it will throw an exception.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>key: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>value: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="algodclient" class="tsd-anchor"></a>
+					<h3>algod<wbr>Client</h3>
+					<div class="tsd-signature tsd-kind-icon">algod<wbr>Client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Algodv2</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L525">algob/src/types.ts:525</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="asa" class="tsd-anchor"></a>
+					<h3>asa</h3>
+					<div class="tsd-signature tsd-kind-icon">asa<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L404">algob/src/types.ts:404</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Mapping of ASA name to deployment log</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="assertcpnotdeleted" class="tsd-anchor"></a>
+					<h3>assertCPNot<wbr>Deleted</h3>
+					<div class="tsd-signature tsd-kind-icon">assertCPNot<wbr>Deleted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>execParams<span class="tsd-signature-symbol">: </span><a href="../modules/runtime.types.html#execparams" class="tsd-signature-type" data-tsd-kind="Type alias">ExecParams</a><span class="tsd-signature-symbol"> | </span><a href="../modules/runtime.types.html#execparams" class="tsd-signature-type" data-tsd-kind="Type alias">ExecParams</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L613">algob/src/types.ts:613</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>execParams<span class="tsd-signature-symbol">: </span><a href="../modules/runtime.types.html#execparams" class="tsd-signature-type" data-tsd-kind="Type alias">ExecParams</a><span class="tsd-signature-symbol"> | </span><a href="../modules/runtime.types.html#execparams" class="tsd-signature-type" data-tsd-kind="Type alias">ExecParams</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Checks if checkpoint is deleted for a particular transaction
+													if checkpoint exists and is marked as deleted,
+												throw error(except for opt-out transactions), else pass</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>execParams: <a href="../modules/runtime.types.html#execparams" class="tsd-signature-type" data-tsd-kind="Type alias">ExecParams</a><span class="tsd-signature-symbol"> | </span><a href="../modules/runtime.types.html#execparams" class="tsd-signature-type" data-tsd-kind="Type alias">ExecParams</a><span class="tsd-signature-symbol">[]</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Transaction execution parameters</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="assertnoasset" class="tsd-anchor"></a>
+					<h3>assert<wbr>NoAsset</h3>
+					<div class="tsd-signature tsd-kind-icon">assert<wbr>NoAsset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L439">algob/src/types.ts:439</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="checkpoint" class="tsd-anchor"></a>
+					<h3>checkpoint</h3>
+					<div class="tsd-signature tsd-kind-icon">checkpoint<span class="tsd-signature-symbol">:</span> <a href="types.checkpointfunctions.html" class="tsd-signature-type" data-tsd-kind="Interface">CheckpointFunctions</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L406">algob/src/types.ts:406</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="deployasa" class="tsd-anchor"></a>
+					<h3>deployASA</h3>
+					<div class="tsd-signature tsd-kind-icon">deployASA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.asadeploymentflags.html" class="tsd-signature-type" data-tsd-kind="Interface">ASADeploymentFlags</a>, asaParams<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L426">algob/src/types.ts:426</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.asadeploymentflags.html" class="tsd-signature-type" data-tsd-kind="Interface">ASADeploymentFlags</a>, asaParams<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Creates and deploys ASA.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.asadeploymentflags.html" class="tsd-signature-type" data-tsd-kind="Interface">ASADeploymentFlags</a></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> asaParams: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="deployssc" class="tsd-anchor"></a>
+					<h3>deploySSC</h3>
+					<div class="tsd-signature tsd-kind-icon">deploySSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>approvalProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, clearProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscdeploymentflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCDeploymentFlags</a>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L493">algob/src/types.ts:493</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>approvalProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, clearProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscdeploymentflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCDeploymentFlags</a>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Deploys stateful smart contract.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>approvalProgram: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>clearProgram: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.sscdeploymentflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCDeploymentFlags</a></h5>
+											</li>
+											<li>
+												<h5>payFlags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> scTmplParams: <a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ensurecompiled" class="tsd-anchor"></a>
+					<h3>ensure<wbr>Compiled</h3>
+					<div class="tsd-signature tsd-kind-icon">ensure<wbr>Compiled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.asccache.html" class="tsd-signature-type" data-tsd-kind="Interface">ASCCache</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L605">algob/src/types.ts:605</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.asccache.html" class="tsd-signature-type" data-tsd-kind="Interface">ASCCache</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Returns ASCCache (with compiled code)</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> force: <span class="tsd-signature-type">boolean</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> scTmplParams: <a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.asccache.html" class="tsd-signature-type" data-tsd-kind="Interface">ASCCache</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fundlsig" class="tsd-anchor"></a>
+					<h3>fund<wbr>Lsig</h3>
+					<div class="tsd-signature tsd-kind-icon">fund<wbr>Lsig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="types.fundascflags.html" class="tsd-signature-type" data-tsd-kind="Interface">FundASCFlags</a>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L464">algob/src/types.ts:464</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="types.fundascflags.html" class="tsd-signature-type" data-tsd-kind="Interface">FundASCFlags</a>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Funds logic signature account (Contract Account).</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>flags: <a href="types.fundascflags.html" class="tsd-signature-type" data-tsd-kind="Interface">FundASCFlags</a></h5>
+											</li>
+											<li>
+												<h5>payFlags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> scTmplParams: <a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getasadef" class="tsd-anchor"></a>
+					<h3>getASADef</h3>
+					<div class="tsd-signature tsd-kind-icon">getASADef<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, asaParams<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L441">algob/src/types.ts:441</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, asaParams<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> asaParams: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> default<wbr>Frozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> metadata<wbr>Hash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> opt<wbr>InAcc<wbr>Names<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>unit<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getasainfo" class="tsd-anchor"></a>
+					<h3>getASAInfo</h3>
+					<div class="tsd-signature tsd-kind-icon">getASAInfo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L408">algob/src/types.ts:408</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getassetbyid" class="tsd-anchor"></a>
+					<h3>get<wbr>Asset<wbr>ByID</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Asset<wbr>ByID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>assetIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AssetInfo</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L533">algob/src/types.ts:533</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>assetIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AssetInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Queries blockchain using algodv2 for asset information by index</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>assetIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AssetInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getcheckpointkv" class="tsd-anchor"></a>
+					<h3>get<wbr>CheckpointKV</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>CheckpointKV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L420">algob/src/types.ts:420</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Queries metadata key in all checkpoint files of current network. If the key is not defined
+												in any checkpoint then <code>undefined</code> is returned. Can be run in both <em>run</em> and <em>deploy</em> mode.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>key: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getdelegatedlsig" class="tsd-anchor"></a>
+					<h3>get<wbr>Delegated<wbr>Lsig</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Delegated<wbr>Lsig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>lsigName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L588">algob/src/types.ts:588</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>lsigName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Object</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Queries a delegated logic signature from checkpoint.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>lsigName: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Object</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getssc" class="tsd-anchor"></a>
+					<h3>getSSC</h3>
+					<div class="tsd-signature tsd-kind-icon">getSSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>nameApproval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nameClear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L584">algob/src/types.ts:584</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>nameApproval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, nameClear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Queries a stateful smart contract info from checkpoint.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>nameApproval: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>nameClear: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isdefined" class="tsd-anchor"></a>
+					<h3>is<wbr>Defined</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Defined<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L523">algob/src/types.ts:523</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Returns true if ASA or DelegatedLsig or SSC were deployed in any script.
+													Checks even for checkpoints which are out of scope from the execution
+												session and are not obtainable using get methods.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="isdeploymode" class="tsd-anchor"></a>
+					<h3>is<wbr>Deploy<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Deploy<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L398">algob/src/types.ts:398</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Allows user to know whether a script is running in a <code>deploy</code> or <code>run</code> mode.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loadasadef" class="tsd-anchor"></a>
+					<h3>loadASADef</h3>
+					<div class="tsd-signature tsd-kind-icon">loadASADef<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>asaName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L437">algob/src/types.ts:437</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>asaName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Loads deployed asset definition from checkpoint.
+													NOTE: This function returns &quot;deployed&quot; ASADef, as immutable properties
+												of asaDef could be updated during tx execution (eg. update asset clawback)</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>asaName: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>clawback<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>decimals<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>defaultFrozen<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>freeze<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>manager<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>metadataHash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>note<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>noteb64<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>optInAccNames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>reserve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>total<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">; </span>unitName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loadlogic" class="tsd-anchor"></a>
+					<h3>load<wbr>Logic</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Logic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogicSig</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L596">algob/src/types.ts:596</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogicSig</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Loads contract mode logic signature (TEAL or PyTEAL)</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> scTmplParams: <a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogicSig</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loadmultisig" class="tsd-anchor"></a>
+					<h3>load<wbr>Multi<wbr>Sig</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Multi<wbr>Sig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogicSig</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L580">algob/src/types.ts:580</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogicSig</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Extracts multi signed logic signature file from <code>assets/</code>.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">LogicSig</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="log" class="tsd-anchor"></a>
+					<h3>log</h3>
+					<div class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L576">algob/src/types.ts:576</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Create an entry in a script log (stored in artifacts/scripts/<script_name>.log) file.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>msg: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>obj: <span class="tsd-signature-type">any</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="logtx" class="tsd-anchor"></a>
+					<h3>log<wbr>Tx</h3>
+					<div class="tsd-signature tsd-kind-icon">log<wbr>Tx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, txConfirmation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L449">algob/src/types.ts:449</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, txConfirmation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>message: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>txConfirmation: <span class="tsd-signature-type">ConfirmedTxInfo</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="mkdelegatedlsig" class="tsd-anchor"></a>
+					<h3>mk<wbr>Delegated<wbr>Lsig</h3>
+					<div class="tsd-signature tsd-kind-icon">mk<wbr>Delegated<wbr>Lsig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, signer<span class="tsd-signature-symbol">: </span><a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.lsiginfo.html" class="tsd-signature-type" data-tsd-kind="Interface">LsigInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L478">algob/src/types.ts:478</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, signer<span class="tsd-signature-symbol">: </span><a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a>, scTmplParams<span class="tsd-signature-symbol">?: </span><a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.lsiginfo.html" class="tsd-signature-type" data-tsd-kind="Interface">LsigInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Makes delegated logic signature signed by the <code>signer</code>.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>signer: <a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> scTmplParams: <a href="types.scparams.html" class="tsd-signature-type" data-tsd-kind="Interface">SCParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="types.lsiginfo.html" class="tsd-signature-type" data-tsd-kind="Interface">LsigInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="optinaccounttossc" class="tsd-anchor"></a>
+					<h3>opt<wbr>InAccount<wbr>ToSSC</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>InAccount<wbr>ToSSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>sender<span class="tsd-signature-symbol">: </span><a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a>, appID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L554">algob/src/types.ts:554</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>sender<span class="tsd-signature-symbol">: </span><a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a>, appID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Opt-In to stateful smart contract (SSC) for a single account
+												signed by account secret key</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>sender: <a href="runtime.types.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>sender account</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>appID: <span class="tsd-signature-type">number</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>application index</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>payFlags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Transaction flags</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Optional parameters to SSC (accounts, args..)</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="optinacounttoasa" class="tsd-anchor"></a>
+					<h3>opt<wbr>InAcount<wbr>ToASA</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>InAcount<wbr>ToASA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>asa<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, accountName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L538">algob/src/types.ts:538</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>asa<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, accountName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Creates an opt-in transaction for given ASA name, which must be defined in
+												<code>/assets/asa.yaml</code> file. The opt-in transaction is signed by the account secret key</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>asa: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>accountName: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="optinlsigtoasa" class="tsd-anchor"></a>
+					<h3>opt<wbr>InLsig<wbr>ToASA</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>InLsig<wbr>ToASA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>asa<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, lsig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogicSig</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L544">algob/src/types.ts:544</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>asa<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, lsig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogicSig</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Creates an opt-in transaction for given ASA name, which must be defined in
+												<code>/assets/asa.yaml</code> file. The opt-in transaction is signed by the logic signature</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>asa: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>lsig: <span class="tsd-signature-type">LogicSig</span></h5>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="optinlsigtossc" class="tsd-anchor"></a>
+					<h3>opt<wbr>InLsig<wbr>ToSSC</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>InLsig<wbr>ToSSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>appID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, lsig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogicSig</span>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L568">algob/src/types.ts:568</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>appID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, lsig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogicSig</span>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Opt-In to stateful smart contract (SSC) for a contract account
+												The opt-in transaction is signed by the logic signature</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>appID: <span class="tsd-signature-type">number</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>application index</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>lsig: <span class="tsd-signature-type">LogicSig</span></h5>
+											</li>
+											<li>
+												<h5>payFlags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Transaction flags</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Optional parameters to SSC (accounts, args..)</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="persistcp" class="tsd-anchor"></a>
+					<h3>persistCP</h3>
+					<div class="tsd-signature tsd-kind-icon">persistCP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L443">algob/src/types.ts:443</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="registerasainfo" class="tsd-anchor"></a>
+					<h3>registerASAInfo</h3>
+					<div class="tsd-signature tsd-kind-icon">registerASAInfo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, asaInfo<span class="tsd-signature-symbol">: </span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L445">algob/src/types.ts:445</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, asaInfo<span class="tsd-signature-symbol">: </span><a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>asaInfo: <a href="runtime.types.asainfo.html" class="tsd-signature-type" data-tsd-kind="Interface">ASAInfo</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="registersscinfo" class="tsd-anchor"></a>
+					<h3>registerSSCInfo</h3>
+					<div class="tsd-signature tsd-kind-icon">registerSSCInfo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sscInfo<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L447">algob/src/types.ts:447</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sscInfo<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>name: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>sscInfo: <a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="sendandwait" class="tsd-anchor"></a>
+					<h3>send<wbr>And<wbr>Wait</h3>
+					<div class="tsd-signature tsd-kind-icon">send<wbr>And<wbr>Wait<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>rawTxns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L455">algob/src/types.ts:455</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>rawTxns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Send signed transaction to network and wait for confirmation</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>rawTxns: <span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">[]</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Signed Transaction(s)</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="updatessc" class="tsd-anchor"></a>
+					<h3>updateSSC</h3>
+					<div class="tsd-signature tsd-kind-icon">updateSSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>sender<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Account</span>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, appID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, newApprovalProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newClearProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L509">algob/src/types.ts:509</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>sender<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Account</span>, payFlags<span class="tsd-signature-symbol">: </span><a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a>, appID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, newApprovalProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newClearProgram<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, flags<span class="tsd-signature-symbol">: </span><a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Update programs(approval, clear) for a stateful smart contract.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>sender: <span class="tsd-signature-type">Account</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Account from which call needs to be made</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>payFlags: <a href="runtime.types.txparams.html" class="tsd-signature-type" data-tsd-kind="Interface">TxParams</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Transaction Flags</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>appID: <span class="tsd-signature-type">number</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>ID of the application being configured or empty if creating</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>newApprovalProgram: <span class="tsd-signature-type">string</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>New Approval Program filename</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>newClearProgram: <span class="tsd-signature-type">string</span></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>New Clear Program filename</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<h5>flags: <a href="runtime.types.sscoptionalflags.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCOptionalFlags</a></h5>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Optional parameters to SSC (accounts, args..)</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="runtime.types.sscinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">SSCInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="waitforconfirmation" class="tsd-anchor"></a>
+					<h3>wait<wbr>For<wbr>Confirmation</h3>
+					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Confirmation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>txId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/scale-it/algo-builder/blob/86b9f69/packages/algob/src/types.ts#L529">algob/src/types.ts:529</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>txId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Queries blockchain for a given transaction and waits until it will be processed.</p>
+											</div>
+										</div>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>txId: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ConfirmedTxInfo</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/errors.html">ERRORS</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/runtime.html">runtime</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+						<a href="../modules/runtime.types.html">runtime.types</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/types.html">types</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="types.deployer.html" class="tsd-kind-icon">Deployer</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#accounts" class="tsd-kind-icon">accounts</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#accountsbyname" class="tsd-kind-icon">accounts<wbr>ByName</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#addcheckpointkv" class="tsd-kind-icon">add<wbr>CheckpointKV</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#algodclient" class="tsd-kind-icon">algod<wbr>Client</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#asa" class="tsd-kind-icon">asa</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#assertcpnotdeleted" class="tsd-kind-icon">assertCPNot<wbr>Deleted</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#assertnoasset" class="tsd-kind-icon">assert<wbr>NoAsset</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#checkpoint" class="tsd-kind-icon">checkpoint</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#deployasa" class="tsd-kind-icon">deployASA</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#deployssc" class="tsd-kind-icon">deploySSC</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#ensurecompiled" class="tsd-kind-icon">ensure<wbr>Compiled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#fundlsig" class="tsd-kind-icon">fund<wbr>Lsig</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#getasadef" class="tsd-kind-icon">getASADef</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#getasainfo" class="tsd-kind-icon">getASAInfo</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#getassetbyid" class="tsd-kind-icon">get<wbr>Asset<wbr>ByID</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#getcheckpointkv" class="tsd-kind-icon">get<wbr>CheckpointKV</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#getdelegatedlsig" class="tsd-kind-icon">get<wbr>Delegated<wbr>Lsig</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#getssc" class="tsd-kind-icon">getSSC</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#isdefined" class="tsd-kind-icon">is<wbr>Defined</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#isdeploymode" class="tsd-kind-icon">is<wbr>Deploy<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#loadasadef" class="tsd-kind-icon">loadASADef</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#loadlogic" class="tsd-kind-icon">load<wbr>Logic</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#loadmultisig" class="tsd-kind-icon">load<wbr>Multi<wbr>Sig</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#log" class="tsd-kind-icon">log</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#logtx" class="tsd-kind-icon">log<wbr>Tx</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#mkdelegatedlsig" class="tsd-kind-icon">mk<wbr>Delegated<wbr>Lsig</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#optinaccounttossc" class="tsd-kind-icon">opt<wbr>InAccount<wbr>ToSSC</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#optinacounttoasa" class="tsd-kind-icon">opt<wbr>InAcount<wbr>ToASA</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#optinlsigtoasa" class="tsd-kind-icon">opt<wbr>InLsig<wbr>ToASA</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#optinlsigtossc" class="tsd-kind-icon">opt<wbr>InLsig<wbr>ToSSC</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#persistcp" class="tsd-kind-icon">persistCP</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#registerasainfo" class="tsd-kind-icon">registerASAInfo</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#registersscinfo" class="tsd-kind-icon">registerSSCInfo</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#sendandwait" class="tsd-kind-icon">send<wbr>And<wbr>Wait</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#updatessc" class="tsd-kind-icon">updateSSC</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="types.deployer.html#waitforconfirmation" class="tsd-kind-icon">wait<wbr>For<wbr>Confirmation</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

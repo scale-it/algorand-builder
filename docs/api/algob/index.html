@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@algo-builder/algob</title>
+	<meta name="description" content="Documentation for @algo-builder/algob">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@algo-builder/algob</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>@algo-builder/algob</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#algo-builder" id="algo-builder" style="color: inherit; text-decoration: none;">
+					<h1>Algo-Builder</h1>
+				</a>
+				<p>Algob is the CLI (Command Line Interface) for Algo Builder. Think about it as an Ethereum Truffle but for Algorand projects.</p>
+				<p>This package provides a variety of high level functions like, <code>executeTransaction</code>, <code>mkTxParams</code>, <code>Deployer</code>, etc. These functions help in making the development phase of algorand applications easier by acting as a middleware between the developer and <code>algosdk</code>.</p>
+				<p>Please read the main <a href="https://github.com/scale-it/algo-builder/blob/master/README.md">README</a> file for details about the project and <code>algob</code>. This file provides a development description about the <code>algob</code> package.</p>
+				<a href="#how-to-use-the-api-docs" id="how-to-use-the-api-docs" style="color: inherit; text-decoration: none;">
+					<h2>How to use the API docs?</h2>
+				</a>
+				<p>The best way to find a type, function or something related to a use case is by using the <strong>search field</strong> at the <strong>top</strong> of this page.</p>
+				<a href="#important-links" id="important-links" style="color: inherit; text-decoration: none;">
+					<h2>Important links</h2>
+				</a>
+				<ul>
+					<li><a href="https://scale-it.github.io/algo-builder">Home Page</a></li>
+					<li><a href="https://scale-it.github.io/algo-builder/api/runtime/index.html">Runtime API Docs</a></li>
+					<li><a href="https://scale-it.github.io/algo-builder/guide/README">User Docs</a></li>
+				</ul>
+				<a href="#using-algob" id="using-algob" style="color: inherit; text-decoration: none;">
+					<h2>Using algob</h2>
+				</a>
+				<p><code>algob</code> can be included as a library using <code>yarn add @algo-builder/algob</code> and then import it using <code>import * from &#39;@algo-builder/algob&#39;</code> or can be run from command line as described in the project <a href="https://github.com/scale-it/algo-builder/blob/master/README.md">README</a> file.</p>
+				<a href="#command-line-usage" id="command-line-usage" style="color: inherit; text-decoration: none;">
+					<h3>Command line usage</h3>
+				</a>
+				<p><code>algob</code> always starts for checking and loading <code>algob.config.js</code> file. The config file will be generated (in the current directory) if not present in the project tree.</p>
+				<p>Help
+				<code>algob help</code></p>
+				<p>View version
+				<code>algob --version</code></p>
+				<p>Launch a node project console
+				<code>algob console</code></p>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>When working on <code>algob</code>, we use CLI directly from the build directory using the following command:</p>
+				<pre><code><span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">run</span><span style="color: #000000"> algob:</span><span style="color: #001080">dev</span>
+</code></pre>
+				<p>It will create a <code>project-dev</code> directory as a copy of the template project (<code>sample-project</code>).
+				In that directory you should update the <code>config.algob.js</code>. The <code>algob:dev</code> command will run all <code>algob</code> in that directory.</p>
+				<p>Also, it my be helpful to link the binary:</p>
+				<pre><code><span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">link</span>
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/errors.html">ERRORS</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/runtime.html">runtime</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+						<a href="modules/runtime.types.html">runtime.types</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/types.html">types</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#convert" class="tsd-kind-icon">convert</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#globalzeroaddress" class="tsd-kind-icon">global<wbr>Zero<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#kmdcredentialsfromenv" class="tsd-kind-icon">KMDCredentials<wbr>From<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#algodcredentialsfromenv" class="tsd-kind-icon">algod<wbr>Credentials<wbr>From<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#balanceof" class="tsd-kind-icon">balance<wbr>Of</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#createmsigaddress" class="tsd-kind-icon">create<wbr>Msig<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#executesignedtxnfromfile" class="tsd-kind-icon">execute<wbr>Signed<wbr>Txn<wbr>From<wbr>File</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#executetransaction" class="tsd-kind-icon">execute<wbr>Transaction</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getprogram" class="tsd-kind-icon">get<wbr>Program</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getsuggestedparams" class="tsd-kind-icon">get<wbr>Suggested<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#loadaccountsfromenv" class="tsd-kind-icon">load<wbr>Accounts<wbr>From<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#loadaccountsfromfile" class="tsd-kind-icon">load<wbr>Accounts<wbr>From<wbr>File</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#loadaccountsfromfilesync" class="tsd-kind-icon">load<wbr>Accounts<wbr>From<wbr>File<wbr>Sync</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#mkaccounts" class="tsd-kind-icon">mk<wbr>Accounts</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#mktxparams" class="tsd-kind-icon">mk<wbr>TxParams</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#printassets" class="tsd-kind-icon">print<wbr>Assets</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#printglobalstatessc" class="tsd-kind-icon">print<wbr>Global<wbr>StateSSC</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#printlocalstatessc" class="tsd-kind-icon">print<wbr>Local<wbr>StateSSC</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#readglobalstatessc" class="tsd-kind-icon">read<wbr>Global<wbr>StateSSC</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#readlocalstatessc" class="tsd-kind-icon">read<wbr>Local<wbr>StateSSC</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#signlogicsigmultisig" class="tsd-kind-icon">sign<wbr>Logic<wbr>Sig<wbr>Multi<wbr>Sig</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#signmultisig" class="tsd-kind-icon">sign<wbr>Multi<wbr>Sig</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
