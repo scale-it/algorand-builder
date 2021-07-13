@@ -1,0 +1,20 @@
+{
+  "name": "algorand-bond",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "algosdk": "^1.9.1"
+  },
+  "scripts": {
+    "algob": "algob",
+    "lint": "eslint --ext .js,.ts scripts",
+    "lint:fix": "eslint --fix --ext .js,.ts scripts",
+    "test": "mocha",
+    "build:docs": "echo ok",
+    "build": "echo ok"
+  },
+  "mocha": {
+    "file": "../../test/setup.js"
+  }
+}
