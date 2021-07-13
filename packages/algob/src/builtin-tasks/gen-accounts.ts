@@ -52,8 +52,7 @@ export async function writeToFile (content: any, force: boolean, fileName: strin
   try {
     await fsp.access(fileName, _fs.constants.F_OK);
     if (!force) {
-      console.error("File", fileName,
-        "already exists. Aborting. Use --force flag if you want to overwrite it");
+      console.error(`File ${fileName} already exists. Aborting. Use --force flag if you want to overwrite it`);
       return;
     }
   } catch (e) {}

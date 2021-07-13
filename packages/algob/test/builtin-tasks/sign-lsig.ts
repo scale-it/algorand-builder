@@ -91,8 +91,8 @@ describe("Sign-lsig task", () => {
       out: outFile
     });
 
-    // assert.isTrue(
-    //  stub.calledWith("No account with the name \"random-account\" exists in the config file."));
+    assert.isTrue(
+      stub.calledWith("No account with the name \"random-account\" exists in the config file."));
     assert.isFalse(fs.existsSync(outFile)); // outfile does not exist
   });
 
@@ -109,9 +109,8 @@ describe("Sign-lsig task", () => {
       out: outFile
     });
 
-    // TODO: check why stub is not working here
-    // assert.isTrue(stub.calledWith(
-    //  "File assets/lsig_out.blsig already exists. Aborting. Use --force flag if you want to overwrite it"));
+    assert.isTrue(stub.calledWith(
+      "File assets/lsig_out.blsig already exists. Aborting. Use --force flag if you want to overwrite it"));
   });
 
   it("Should append _out to input file if outfile is not passed", async function () {

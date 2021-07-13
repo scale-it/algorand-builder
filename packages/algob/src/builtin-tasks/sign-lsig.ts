@@ -18,7 +18,7 @@ async function multiSignLsig (
 ): Promise<void> {
   const signerAccount = runtimeEnv.network.config.accounts.find(acc => acc.name === taskArgs.account);
   if (signerAccount === undefined) {
-    console.error("No account with the name \"%s\" exists in the config file.", taskArgs.account);
+    console.error(`No account with the name "${taskArgs.account}" exists in the config file.`);
     return;
   }
 
